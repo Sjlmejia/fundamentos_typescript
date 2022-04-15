@@ -1,4 +1,3 @@
-//@ts-check
 (async()=> {
   const myCart = [];
   const products = [];
@@ -13,7 +12,7 @@
   }
   function getTotal() {
     let total = 0;
-    for (const i = 0; i < products.length; i++) {
+    for (let i = 0; i < products.length; i++) {
       total += products[i].prize;
     }
     return total;
@@ -25,14 +24,14 @@
   }
 
   await getProducts();
-  addProducto(1);
-  addProducto(2);
+  addProduct(1);
+  addProduct(2);
   const total = getTotal();
   console.log(total);
   const person = {
     name: 'Nicolas',
     lastName: 'Molina'
   }
-  const rta = person +  limit;
-  console.log(rta);
+  // const rta = person +  limit;
+  // console.log(rta);
 });
